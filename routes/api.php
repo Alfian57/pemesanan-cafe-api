@@ -16,7 +16,7 @@ Route::post('login', [AuthController::class, 'login']);
 
 Route::post('logout', [AuthController::class, 'logout']);
 
-Route::apiResource('tables', TableController::class);
+Route::apiResource('tables', TableController::class)->except('show');
 
 Route::apiResource('categories', CategoryController::class);
 

@@ -29,7 +29,7 @@ class CategoryController extends Controller
             ->allowedSorts(['name'])
             ->jsonPaginate();
 
-        return response()->json($categories);
+        return CategoryResource::collection($categories);
     }
 
     /**

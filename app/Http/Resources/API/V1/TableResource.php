@@ -5,7 +5,7 @@ namespace App\Http\Resources\API\V1;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class MenuResource extends JsonResource
+class TableResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,13 +17,10 @@ class MenuResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'image' => url($this->image),
-            'price' => $this->price,
+            'capacity' => $this->capacity,
             'description' => $this->description,
-            'status' => $this->status,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
-            'categories' => CategoryResource::collection($this->whenLoaded('categories')),
         ];
     }
 }
