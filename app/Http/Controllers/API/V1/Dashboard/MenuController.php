@@ -15,6 +15,8 @@ class MenuController extends Controller
 {
     /**
      * Display a listing of the resource.
+     *
+     * @unauthenticated
      */
     public function index(Request $request)
     {
@@ -50,6 +52,8 @@ class MenuController extends Controller
 
     /**
      * Display the specified resource.
+     *
+     * @unauthenticated
      */
     public function show(Menu $menu)
     {

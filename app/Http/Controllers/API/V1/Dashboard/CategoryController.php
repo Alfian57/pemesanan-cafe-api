@@ -14,6 +14,8 @@ class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
+     *
+     * @unauthenticated
      */
     public function index(Request $request)
     {
@@ -46,6 +48,8 @@ class CategoryController extends Controller
 
     /**
      * Display the specified resource.
+     *
+     * @unauthenticated
      */
     public function show(Category $category)
     {
