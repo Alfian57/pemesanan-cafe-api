@@ -17,7 +17,9 @@ class OrderItemFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'order_id' => \App\Models\Order::inRandomOrder()->first()->id,
+            'menu_id' => \App\Models\Menu::inRandomOrder()->first()->id,
+            'quantity' => $this->faker->numberBetween(1, 10),
         ];
     }
 }

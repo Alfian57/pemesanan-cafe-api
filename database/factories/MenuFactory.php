@@ -17,7 +17,11 @@ class MenuFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => $this->faker->word,
+            'image' => $this->faker->imageUrl(),
+            'price' => $this->faker->randomElement([10000, 20000, 30000, 40000, 50000]),
+            'description' => $this->faker->sentence,
+            'status' => $this->faker->randomElement(['available', 'unavailable']),
         ];
     }
 }

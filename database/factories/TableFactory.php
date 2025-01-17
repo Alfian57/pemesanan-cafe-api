@@ -17,7 +17,9 @@ class TableFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => $this->faker->unique()->word,
+            'capacity' => $this->faker->numberBetween(2, 10),
+            'description' => $this->faker->sentence,
         ];
     }
 }
