@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('cashier_id')->constrained('users')->cascadeOnDelete();
             $table->enum('order_status', ['waiting-confirmation', 'pending', 'completed', 'cancelled']);
             $table->enum('order_type', ['dine-in', 'take-away']);
-            $table->enum('payment_method', ['cash', 'credit_card', 'debit_card', 'via-web']);
+            $table->enum('payment_method', ['cash', 'via-web']);
             $table->enum('payment_status', ['unpaid', 'paid']);
             $table->timestamps();
         });

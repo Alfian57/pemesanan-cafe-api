@@ -11,6 +11,8 @@ class AuthController extends Controller
 {
     /**
      * Login for Admin and Cashier
+     *
+     * @unauthenticated
      */
     public function login(LoginRequest $request)
     {
