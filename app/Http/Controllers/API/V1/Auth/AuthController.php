@@ -10,9 +10,7 @@ use Illuminate\Support\Facades\Auth;
 class AuthController extends Controller
 {
     /**
-     * Login
-     *
-     * API ini digunakan untuk login admin dan cashier.
+     * Login for Admin and Cashier
      */
     public function login(LoginRequest $request)
     {
@@ -38,8 +36,6 @@ class AuthController extends Controller
 
     /**
      * Logout
-     *
-     * API ini digunakan untuk logout admin dan cashier.
      */
     public function logout(Request $request)
     {
