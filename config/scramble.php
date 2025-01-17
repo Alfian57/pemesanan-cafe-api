@@ -76,7 +76,9 @@ return [
      * ],
      * ```
      */
-    'servers' => null,
+    'servers' => [
+        'Prod' => 'https://api-pemesanan-cafe.mami-ledy.site/api',
+    ],
 
     'middleware' => [
         'web',
